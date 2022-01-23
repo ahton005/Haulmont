@@ -3,6 +3,7 @@ package ru.zyablov.haulmont.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -16,13 +17,21 @@ public class Bank {
 
     @ManyToMany()
     @JoinTable(name = "bank_customer",joinColumns = @JoinColumn(name = "bank_id"),inverseJoinColumns = @JoinColumn(name = "customer_id"))
-    private List<Customer> customers;
+    private List<Customer> customers = new ArrayList<>();
 
     @OneToMany
     @JoinColumn(name = "bank_id")
-    private List<Credit> credits;
+    private List<Credit> credits = new ArrayList<>();
 
     public Bank() {
+    }
+
+    public void addCredit(Credit credit){
+        credits.add(credit);
+    }
+
+    public void addCustomer(Customer customer){
+        customers.add(customer);
     }
 
     @Override

@@ -19,9 +19,6 @@ public class Credit {
 
     @Column(name = "credit_limit")
     private long creditLimit;
-//    @OneToMany()
-//    @JoinColumn(name = "credit_offer_id")
-//    private List<CreditOffer> creditOffers;
 
     public Credit() {}
 

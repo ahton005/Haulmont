@@ -1,3 +1,0 @@
-/*C2*/SET SCHEMA PUBLIC
-alter table bank_customer add column customer_id bigint not null
-alter table bank_customer add constraint FKqrt65o60yp8bucwf51rsf3p6q foreign key (customer_id) references customer

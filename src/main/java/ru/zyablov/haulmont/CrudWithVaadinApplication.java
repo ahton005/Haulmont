@@ -17,18 +17,20 @@ public class CrudWithVaadinApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(CrudWithVaadinApplication.class);
-        Session session = HibernateSessionFactory.getSessionFactory().openSession();
+//        Session session = HibernateSessionFactory.getSessionFactory().openSession();
 //        Customer c = new Customer("Ivan","89518672580","ivan@mail.ru","2015874563");
 //        Customer c1 = new Customer("Petr","89518672581","petr@mail.ru","2015874147");
 //        Credit credit = new Credit(20,2000000);
-        Bank bank = new Bank();
-        session.beginTransaction();
-        session.save(bank);
+//        Bank bank = new Bank();
+//        bank.addCredit(credit);
+//        bank.addCustomer(c);
+//        session.beginTransaction();
+//        session.save(bank);
 //        session.save(c);
 //        session.save(c1);
 //        session.save(credit);
-        session.getTransaction().commit();
-        session.close();
+//        session.getTransaction().commit();
+//        session.close();
     }
 
 }
